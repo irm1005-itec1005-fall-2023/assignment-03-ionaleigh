@@ -123,12 +123,15 @@ if (typeof todoId !== 'number' || isNaN(todoId)) {
   return;
 }
   try{
-  /* check todo exists
+  /* check todo exists */
   let todoItem = todoItems.find(item => item.id === todoId);
+
+    console.log(todoItem)
+
   if (!todoItem){
     console.error(`Todo item with ID ${todoId} not found.`);
     return;
-}*/ //For some reason I cannot get this to work as it always returns the error message saying the item DNE but it does???? any suggestions would be greatly appreciated haha
+  } //For some reason I cannot get this to work as it always returns the error message saying the item DNE but it does???? any suggestions would be greatly appreciated haha
 
   // Implement the logic to mark a task as completed here
   for (let index = 0; index < todoItems.length; index++){
@@ -141,7 +144,13 @@ if (typeof todoId !== 'number' || isNaN(todoId)) {
   console.error('Error found while marking todo item as completed');
 }
 }
+
+// Adding a todo item into the array 
+addToDoItem("Hello world");
+// Remove the first one
 markToDoItemAsCompleted(1);
+// Display Todo Array
+console.log("Todo Items", todoItems);
 
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
